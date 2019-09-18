@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="-10dp"
+            android:textColor="@color/buttoncolor"
+            android:fontFamily="@font/mavenpro_regular"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            tools:text="Title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="10"
+
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:layout_gravity="center"
+                android:layout_height="2dp"
+                android:max="100" />
+
+            <ImageView
+                android:id="@+id/actionButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:layout_height="30dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="-2dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/progress_TextView"
+                android:layout_width="wrap_content"
+                android:layout_gravity="left"
+                android:textSize="11dp"
+                android:textColor="@color/buttoncolor"
+                android:layout_height="wrap_content"
+                tools:text="10%" />
+
+            <TextView
+                android:gravity="right"
+                android:id="@+id/downloadSpeedTextView"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorAccent"
+                android:paddingRight="10dp"
+                android:textSize="11dp"
+                android:layout_height="wrap_content"
+                tools:text="204 MB/s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/remaining_TextView"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textColor="@color/buttoncolor"
+                android:layout_height="match_parent"
+                android:textSize="11dp"
+                tools:text="10s" />
+
+            <TextView
+                android:id="@+id/status_TextView"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:textSize="11dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/buttoncolor"
+                app:layout_constraintTop_toBottomOf="@+id/actionButton"
+                tools:text="Status" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="1dp">
+    </View>
+</LinearLayout>
